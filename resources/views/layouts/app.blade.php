@@ -36,11 +36,18 @@
                         <li class="nav-item">
                             <a class="nav-link" href={{ url('add/product/view') }}>Add Product</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href={{ url('dashboard') }}>Dashboard</a>
+                        </li>
                     </ul>
+
+
+
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
+
                         @guest
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>

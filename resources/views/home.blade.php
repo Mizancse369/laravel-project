@@ -31,7 +31,6 @@
                                     <td>{{$name->created_at}}</td>
                                     <td>{{$name->updated_at}}</td>
                                 </tr>
-
                             @endforeach
                             </tbody>
                         </table>
