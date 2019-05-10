@@ -26,4 +26,10 @@ Route::get('/content', 'HomeController@content');
 
 Route::get('/add/product/view','ProductController@addproductview');
 Route::post('/add/product/insert','ProductController@addproductinsert');
+//route ar vitor a {} diye vitore ja hobe ta laravel variabale hisabe dore nibe
+//variable ar nam jekono kisu hote pare
+//Route::get('/delect/product/{product_id}','ProductController@delectproduct');
+Route::get('/delect/product/{product_id}','ProductController@delectproduct');
+
+
 

@@ -12,9 +12,9 @@ class ProductController extends Controller
 {
     function addproductview()
     {
-        $products= Product::paginate(3);
-       // $products= Product::simplePaginate(3);
-        return view('product/view',compact('products'));
+        $products = Product::paginate(3);
+        // $products= Product::simplePaginate(3);
+        return view('product/view', compact('products'));
     }
 
     /**
@@ -37,6 +37,8 @@ class ProductController extends Controller
 //       echo $request->product_price;
         // print_r($request->all());
 
+
+
         Product::create([
             'product_name' => $request->product_name,
             'product_discription' => $request->product_discription,
@@ -47,8 +49,14 @@ class ProductController extends Controller
 //    dan pase a thke from ar field ar nam
         ]);
 
-       // with fuction ta r session ta same
-      return back()->with('status','product added successfully');
+        // with fuction ta r session ta same
+        return back()->with('status', 'product added successfully');
     }
 
+    function delectproduct($product_id)
+    {
+       Product::where('id',$product_id)->delete();
+   // Product::find($product_id)->delete();
+        return back()->with('delectstatus', 'product delected successfully');
+    }
 }
